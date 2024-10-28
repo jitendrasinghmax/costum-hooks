@@ -1,13 +1,19 @@
+
+import { useEffect } from 'react';
 import './App.css'
-import useCounter from './hooks/useCounter'
+import useFetch from './hooks/useFetch'
 
 function App() {
-  const {counter,increaseCount}=useCounter();
-  return (
-    <>
-      <button onClick={increaseCount}>increase{counter}</button>
-    </>
-  )
+  const { finalData, loading } = useFetch("https://jsonplaceholder.typicode.com/todos/1");
+  if (loading) {
+    return <h1>loading...</h1>
+  } else {
+    return (
+      <>
+        <div>{JSON.stringify(finalData)}</div>
+      </>
+    )
+  }
 }
 
 export default App
