@@ -6,3 +6,7 @@ const useCounter=()=>{
     return {counter,increaseCount}
 }
 export default useCounter;
+
+//1.each time the useCounter function is called
+//  a new counter state is created---> due to this 
+//  all the useState hook has its own indeipendent states.
