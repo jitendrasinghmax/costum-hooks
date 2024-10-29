@@ -1,19 +1,20 @@
 
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './App.css'
 import useFetch from './hooks/useFetch'
+import usePrev from './hooks/usePrev';
 
 function App() {
-  const { finalData, loading } = useFetch("https://jsonplaceholder.typicode.com/todos/1");
-  if (loading) {
-    return <h1>loading...</h1>
-  } else {
-    return (
-      <>
-        <div>{JSON.stringify(finalData)}</div>
-      </>
-    )
-  }
+  const [state,setState]=useState(0);
+  const prev=usePrev(state);
+  
+  return(
+    <>
+    <h1>current state {state}</h1>
+    <button onClick={()=>setState(p=>p+1)}>increase state</button>
+    <h1>prev state is {prev}</h1>
+    </>
+  )
 }
 
 export default App
