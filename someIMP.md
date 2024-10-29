@@ -1,4 +1,4 @@
-const component=()=>{
+`const component=()=>{
     let ref=useRef(inital value);->>>ref value is initialized only in the first
                                      first render, in re-render ref is not reinitilized.
                                      ref value can only be changed by using ref.current
@@ -8,7 +8,7 @@ const component=()=>{
             <div>component</div>
         </>
     )
-}
+}`
 react first returns the useEffect is triggered
 ------------------------------------------------------------------------------------------
 sequence at which the programs runs->>>>>
