@@ -1,4 +1,5 @@
-`const component=()=>{
+```javascript
+const component=()=>{
     let ref=useRef(inital value);->>>ref value is initialized only in the first
                                      first render, in re-render ref is not reinitilized.
                                      ref value can only be changed by using ref.current
@@ -13,6 +14,7 @@ react first returns the useEffect is triggered
 ------------------------------------------------------------------------------------------
 sequence at which the programs runs->>>>>
 
+```jsx
 const component=()=>{
 
     console.log("control is in the body of function");
@@ -27,7 +29,7 @@ const component=()=>{
             <div>hi this is jitendra singh</div>
         </>
     )
-}
+}`
 
 **output in the console**
 
